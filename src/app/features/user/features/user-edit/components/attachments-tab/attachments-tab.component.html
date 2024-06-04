@@ -1,0 +1,67 @@
+<div class="attachments-container">
+  <div class="header">
+    Załączniki
+  </div>
+
+  <div class="form-content" [formGroup]="form">
+    <label for="files" class="form-control-files">
+      <input id="files" type="file" [formControl]="form.controls.files">
+      <img ngSrc="./assets/icons/files.svg" alt="files" width="34" height="36">
+      <div class="title">Drag and drop files</div>
+      <div class="subtitle">Drag and drop files or select from your files</div>
+    </label>
+
+    <div class="form-control">
+      <label [for]="firstName">First Name</label>
+      <input #firstName type="text" [formControl]="form.controls.firstName">
+    </div>
+
+
+    <div class="form-control">
+      <label [for]="lastName">Last Name</label>
+      <input #lastName type="text" [formControl]="form.controls.lastName">
+    </div>
+
+
+    <div class="form-control">
+      <label [for]="birth">Birth date</label>
+      <input #birth type="date" [formControl]="form.controls.birthday">
+    </div>
+
+    <div class="form-control">
+      <label [for]="citizenship">Citizenship</label>
+      <input #citizenship type="text" [formControl]="form.controls.citizenship">
+    </div>
+
+  </div>
+</div>
+
+<div class="contact-information">
+  <div class="header">
+    Contact information
+  </div>
+
+  <div class="form-content">
+    <div class="form-control">
+      <label [for]="insta">Instagram</label>
+      <input #insta type="text" [formControl]="form.controls.instagram">
+    </div>
+
+
+    <div class="form-control">
+      <label [for]="email">Email</label>
+      <input #email type="email" [formControl]="form.controls.email">
+    </div>
+
+
+    <div class="form-control">
+      <label [for]="tweeter">Tweeter</label>
+      <input #tweeter type="text" [formControl]="form.controls.tweeter">
+    </div>
+
+    <div class="form-control">
+      <label [for]="facebook">Facebook</label>
+      <input #facebook type="text" [formControl]="form.controls.facebook">
+    </div>
+  </div>
+</div>
