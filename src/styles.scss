@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/font";
+
+body {
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 12px;
+  background-color: #FBFBFB;
+}
+
+:root {
+  //Brandcolours
+  --brand-logo-navy: #315296;
+  --brand-logo-yellow: #fab900;
+
+  //Primarycolours
+  --primary-b-blue: #5e92fc;
+  --primary-bg-blue-grey: #6e7c98;
+  --primary-y-yellow: #fabb2b;
+  --primary-w-white: #ffffff;
+
+  //Secondarycolours
+  --secondary-b-lighten20: rgba(94, 146, 252, 0.8);
+
+  //TODO:JustshouldbeHEX
+  --secondary-b-lighten70: #cfdefe;
+  --secondary-b-lighten90: #eff4ff;
+  --secondary-bg-lighten20: rgba(110, 124, 152, 0.8);
+
+  //TODO:JustshouldbeHEX
+  --secondary-bg-lighten70: #d4d8e0;
+  --secondary-bg-lighten90: #f0f2f5;
+  --secondary-y-lighten20: rgba(250, 187, 43, 0.8);
+
+  //TODO:JustshouldbeHEX
+  --secondary-y-lighten70: #feebbf;
+  --secondary-y-lighten90: #fff8ea;
+
+  //Systemcolours
+  --signal-error-red: #e5322c;
+  --signal-error-red-lighten20: #ea5b56;
+  --signal-error-red-lighten50: #f29996;
+  --signal-error-red-lighten90: #fceaea;
+  --signal-success-green: #68bb4b;
+  --signal-success-green-lighten20: #86c96f;
+  --signal-success-green-lighten50: rgba(104, 187, 75, 0.5);
+
+  //TODO:JustshouldbeHEX
+  --signal-success-green-lighten90: #f0f8ed;
+
+  //UIcolours
+  --ui-g1-gray1: #262729;
+  --ui-g2-gray2: #3d3f42;
+  --ui-g3-gray3: #6e7075;
+  --ui-g4-gray4: #9ea1a8;
+  --ui-g5-gray5: #dbdde0;
+  --ui-g6-gray6: #f3f4f5;
+  --ui-g7-gray7: #fbfbfb;
+
+  //Supportingcolours
+  --supporting-1-orange: #f5812d;
+  --supporting-2-dark-green: #2d6a43;
+  --supporting-3-darken-red: #d92f2a;
+  --supporting-4-purple: #8a388a;
+  --supporting-5-light-blue: #3082cd;
+  --supporting-6-sea-green: #00a2a2;
+  --supporting-7-navy: #325395;
+  --supporting-7-lighten20: #7a8fbb;
+
+  //TODO:opacity:0.9?JustshouldbeHEX
+  --supporting-8-olive: #bab309;
+  --supporting-9-kobalt: #0055ff;
+
+  //whereis10?:)//whereis11?:)
+  --supporting-12: #04cfeb;
+}

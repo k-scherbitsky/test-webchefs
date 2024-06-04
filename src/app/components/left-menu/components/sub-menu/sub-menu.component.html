@@ -1,0 +1,9 @@
+<ul class="sub-menu">
+  <li
+    *ngFor="let subitem of menu.subitems"
+    [routerLink]="[menu.url, subitem.url]"
+    routerLinkActive="active"
+  >
+    {{ subitem.title }}
+  </li>
+</ul>

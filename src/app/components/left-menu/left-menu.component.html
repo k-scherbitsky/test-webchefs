@@ -1,0 +1,53 @@
+<div class="left-menu" *ngIf="(leftMenuService.showMenu$ | async)">
+  <div class="toggle">
+    <img (click)="onToggleClick()" ngSrc="./assets/icons/toggle.svg" alt="Menu toggle" width="24" height="24">
+  </div>
+
+  <div class="date">
+    <div class="week-day">{{ currentDate | date: 'EEEE' }}</div>
+    <div class="month-day">{{ currentDate | date: 'd MMMM' }}</div>
+    <div class="year">{{ currentDate | date: 'yyyy' }}</div>
+  </div>
+
+  <div class="menu-items">
+    <ng-container *ngFor="let menu of menuItems">
+      <div
+        *ngIf="!menu?.subitems"
+        class="item"
+        [routerLink]="menu.url"
+        routerLinkActive="active"
+      >
+        <div class="collapse-item">
+          <img
+            [ngSrc]="'./assets/icons/' + menu.icon + '.svg'"
+            alt="Menu item"
+            width="40"
+            height="40"
+            class="icon"
+          >
+          <div class="title">{{ menu.title }}</div>
+        </div>
+      </div>
+
+      <div
+        *ngIf="menu?.subitems"
+        class="item"
+        [class.active]="isActive(menu.url)"
+      >
+        <div class="collapse-item">
+          <img
+            [ngSrc]="'./assets/icons/' + menu.icon + '.svg'"
+            alt="Menu item"
+            width="40"
+            height="40"
+            class="icon"
+          >
+          <div class="title">{{ menu.title }}</div>
+        </div>
+        <ng-container *ngIf="menu?.subitems">
+          <app-sub-menu [menu]="menu"></app-sub-menu>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,86 @@
+:host {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .breadcrumbs-container {
+      .breadcrumbs {
+        display: flex;
+        flex-direction: row;
+        column-gap: 2px;
+
+        span {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14.22px;
+          text-align: left;
+          color: #6E7075;
+        }
+      }
+
+      .subtitle {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 26.07px;
+        text-align: left;
+        color: #325395;
+      }
+    }
+
+    .action-buttons {
+      display: flex;
+      flex-direction: row;
+      column-gap: 22px;
+    }
+  }
+
+
+  .content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    background-color: #FFFFFF;
+
+    .left-panel, .right-panel {
+      border-radius: 2px;
+      border: 1px solid #DBDDE0;
+    }
+
+    .header-tabs {
+      height: 52px;
+      display: flex;
+      flex-direction: row;
+
+      .tab {
+        padding: 20px 8px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14.22px;
+
+
+        &.active {
+          border-bottom: 4px solid #5E92FC;
+          font-weight: 500;
+        }
+      }
+    }
+
+
+    .left-panel {
+      width: 60%;
+    }
+
+    .right-panel {
+      width: 40%;
+    }
+
+  }
+}

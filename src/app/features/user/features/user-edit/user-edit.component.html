@@ -1,0 +1,44 @@
+<div class="header">
+  <div class="breadcrumbs-container">
+    <div class="breadcrumbs">
+      <span>User</span>
+      <span>/</span>
+      <span>User Edit</span>
+    </div>
+    <div class="subtitle">Hugh Jackman</div>
+  </div>
+
+  <div class="action-buttons">
+    <app-button
+      [color]="'var(--signal-error-red)'"
+      title="delete"
+    ></app-button>
+    <app-button
+      [color]="'var(--primary-y-yellow)'"
+      title="block"
+    ></app-button>
+    <app-button
+      [color]="'var(--primary-bg-blue-grey)'"
+      title="set password"
+    ></app-button>
+    <app-button
+      [color]="'var(--primary-b-blue)'"
+      title="save"
+    ></app-button>
+  </div>
+</div>
+
+<div class="content">
+  <div class="left-panel">
+    <div class="header-tabs">
+      <div class="tab">Logs</div>
+      <div class="tab active">Permissions</div>
+    </div>
+
+    <app-permission-tab></app-permission-tab>
+
+  </div>
+
+  <div class="right-panel">wef</div>
+</div>
+
