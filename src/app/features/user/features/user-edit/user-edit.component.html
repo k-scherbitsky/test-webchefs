@@ -22,6 +22,7 @@
       title="set password"
     ></app-button>
     <app-button
+      (clicked)="onSaveAttachForm()"
       [color]="'var(--primary-b-blue)'"
       title="save"
     ></app-button>
@@ -45,7 +46,9 @@
       <div class="tab">Historia</div>
     </div>
 
-    <app-attachments-tab></app-attachments-tab>
+    <app-attachments-tab
+      [form]="attachForm"
+    ></app-attachments-tab>
   </div>
 </div>
 
