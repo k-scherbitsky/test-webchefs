@@ -32,7 +32,7 @@ export class UserEditComponent {
       tweeter: this.attachForm.controls.tweeter.value,
       permissions: this.attachForm.controls.permissions.controls.map(form => ({
         id: form.controls.id.value,
-        objectName: form.controls.id.value,
+        objectName: form.controls.objectName.value,
         create: form.controls.create.value,
         read: form.controls.read.value,
         update: form.controls.update.value,

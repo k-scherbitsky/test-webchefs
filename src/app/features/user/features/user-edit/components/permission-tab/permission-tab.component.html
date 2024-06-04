@@ -19,21 +19,25 @@
       <td>{{ data.objectName }}</td>
       <td class="action-buttons">
         <app-button
+          (clicked)="onClickAction(data.id, 'create', data.create)"
           [color]="data.create ? 'var(--supporting-1-orange)' :'var(--ui-g5-gray5)'"
           size="small"
           title="create"
         ></app-button>
         <app-button
+          (clicked)="onClickAction(data.id,'read', data.read)"
           [color]="data.read ? 'var(--primary-b-blue)' : 'var(--ui-g5-gray5)'"
           size="small"
           title="read"
         ></app-button>
         <app-button
+          (clicked)="onClickAction(data.id,'update', data.update)"
           [color]="data.update ? 'var(--supporting-6-sea-green)' : 'var(--ui-g5-gray5)'"
           size="small"
           title="update"
         ></app-button>
         <app-button
+          (clicked)="onClickAction(data.id,'delete', data.delete)"
           [color]="data.delete ? 'var(--supporting-3-darken-red)' : 'var(--ui-g5-gray5)'"
           size="small"
           title="delete"
