@@ -14,6 +14,7 @@
       title="delete"
     ></app-button>
     <app-button
+      (clicked)="showDialog()"
       [color]="'var(--primary-y-yellow)'"
       title="block"
     ></app-button>
@@ -53,4 +54,11 @@
     ></app-attachments-tab>
   </div>
 </div>
+
+<app-confirmation-dialog
+  *ngIf="isShowDialog"
+  title="Are you sure?"
+  (yes)="onYes()"
+  (no)="onNo()"
+></app-confirmation-dialog>
 

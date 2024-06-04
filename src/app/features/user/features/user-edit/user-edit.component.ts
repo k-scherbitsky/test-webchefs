@@ -11,6 +11,7 @@ import { Permission } from 'src/app/features/user/features/user-edit/models/perm
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserEditComponent {
+  public isShowDialog: boolean = false;
   public attachForm: FormGroup<AttachFormStructure>;
 
   constructor(
@@ -57,5 +58,17 @@ export class UserEditComponent {
       files: new FormControl(),
       permissions: new FormArray<FormGroup<PermissionFormStructure>>([]),
     });
+  }
+
+  public showDialog(): void {
+    this.isShowDialog = true;
+  }
+
+  public onYes(): void {
+    this.isShowDialog = false;
+  }
+
+  public onNo(): void {
+    this.isShowDialog = false;
   }
 }
