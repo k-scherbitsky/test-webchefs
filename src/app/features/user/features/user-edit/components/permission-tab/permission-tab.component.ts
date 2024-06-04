@@ -6,6 +6,8 @@ import { AttachFormStructure, PermissionFormStructure } from 'src/app/features/u
 import { Permission } from 'src/app/features/user/features/user-edit/models/permission';
 import { ButtonComponent } from 'src/app/shared/button/button.component';
 
+type ActionType = 'create' | 'read' | 'update' | 'delete';
+
 @Component({
   selector: 'app-permission-tab',
   standalone: true,
@@ -29,6 +31,22 @@ export class PermissionTabComponent implements OnInit {
 
   public ngOnInit(): void {
     this.intiForm();
+  }
+
+  public onClickAction(id: number, action: ActionType, flag: boolean): void {
+    this.tableData.forEach((data) => {
+      if (data.id === id) {
+        data[action] = !flag;
+      }
+    });
+
+    this.form.controls.permissions.controls.forEach((form, index) => {
+      if (form.controls.id.value === id) {
+        form.patchValue({
+          [action]: !form.controls[action].value,
+        });
+      }
+    });
   }
 
   private intiForm(): void {
