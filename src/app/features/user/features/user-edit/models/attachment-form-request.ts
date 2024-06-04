@@ -1,3 +1,5 @@
+import { Permission } from 'src/app/features/user/features/user-edit/models/permission';
+
 export interface AttachmentFormRequest {
   firstName: string;
   lastName: string;
@@ -8,4 +10,5 @@ export interface AttachmentFormRequest {
   tweeter: string;
   facebook: string;
   files: File[];
+  permissions: Permission[];
 }
